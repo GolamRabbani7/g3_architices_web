@@ -19,7 +19,7 @@
       font-size: 2.8rem;
       font-style: normal;
       font-weight: 700;
-      text-align: center;
+      /* text-align: center; */
   }
 
   nav {
@@ -135,9 +135,68 @@
 
   }
 
+  /* fact styles  */
+
+  .facts-card-container {
+      display: flex;
+      gap: 20px;
+      justify-content: space-around;
+      margin-top: 30px;
+  }
+
+  .facts-card img {
+      width: 45.221px;
+      height: 45.222px;
 
 
+  }
 
+  .card-title {
+      color: #727272;
+      font-size: 20px;
+      font-weight: 600;
+
+
+  }
+
+  .card-stats {
+      font-weight: 600;
+      font-size: 45px;
+      color: #424242;
+  }
+
+  .facts-card {
+      border-radius: 10px;
+      background: #FFF;
+      border-radius: 8px;
+      border: 1px solid #FF900E;
+      text-align: center;
+      padding: 30px;
+      width: 241.831px;
+      height: 241.831px;
+      /* transform: rotate(90deg); */
+      /* flex-shrink: 0; */
+
+  }
+
+  /* sponspore style  */
+  .sponspore-content {
+      text-align: center;
+  }
+
+  .sponspore-img-container {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      margin-top: 50px;
+      gap: 20px;
+  }
+
+  .sponspore-img-container img {
+      width: 153.333px;
+      height: 50px;
+      flex-shrink: 0;
+  }
 
   /* media quary style */
 
@@ -145,9 +204,21 @@
   @media screen and (max-width:576px) {
 
       nav,
-      .teams-container {
+      .teams-container,
+      .facts-card-container,
+      .sponspore-img-container {
           flex-direction: column-reverse;
       }
+
+      .facts-card-container {
+          margin: 7rem;
+      }
+
+      .teams-description,
+      .teams-title2{
+          margin-left: 2rem;
+      }
+
 
       header,
       nav ul {
@@ -159,14 +230,13 @@
           font-size: 2.8rem;
       }
 
-      .teams-img-container{
-        
-        grid-template-columns: repeat(1,1fr);
+      .teams-img-container {
+          grid-template-columns: repeat(1, 1fr);
       }
-      
+
       .teams-contant {
-        padding: 0px 20px;
-    }
+          padding: 0px 20px;
+      }
   }
 
 
@@ -174,17 +244,22 @@
   /* teblet or medium devieces   */
   @media screen and (min-width:576px) and (max-width:990px) {
 
-      nav
-      {
+      nav {
           flex-direction: column;
       }
-    
+
       .banner-contant {
           text-align: center;
       }
-      .teams-container{
-        flex-direction: column;
+
+      .facts {
+          margin: 20px;
       }
+
+      .teams-container {
+          flex-direction: column;
+      }
+
       .banner-title {
           margin-top: 10px;
           font-size: 2.8rem;
@@ -194,5 +269,7 @@
       nav ul {
           padding: 50px 0px 0px;
       }
-
+      .sponspore-img-container{
+        margin: 0px auto;
+      }
   }
